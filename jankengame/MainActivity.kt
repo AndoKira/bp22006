@@ -82,7 +82,6 @@ class MainActivity : AppCompatActivity() {
         if(time>5) {
             val intent=Intent(this,SecondPage::class.java)
             val bandle=Bundle()
-            bandle.putString("draw",result[0].toString())
             bandle.putString("lose",result[1].toString())
             bandle.putString("win",result[2].toString())
             intent.putExtra("bundle",bandle)
