@@ -71,21 +71,20 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun JUDGE(me:Int){
-        val judge=(me-comp+3)%3
+        val tvte:TextView=findViewById(R.id.tvte)
+        var judge=(me-comp+3)%3
+        if(judge==0){
+            tvte.text="あいこで・・"
+        }else{
         result[judge]++
         time++
-
-        if(time==6) {
-           /*  AlertDialog.Builder(this)
-                 .setTitle("結果発表！！")
-                 .setMessage(result[0].toString()+"勝"+result[1].toString()+"敗"+result[2].toString()+"分け")
-                 .setPositiveButton("OK",null)
-                 .show()*/
+        }
+        if(time>5) {
             val intent=Intent(this,SecondPage::class.java)
             val bandle=Bundle()
-            bandle.putString("win",result[0].toString())
+            bandle.putString("draw",result[0].toString())
             bandle.putString("lose",result[1].toString())
-            bandle.putString("draw",result[2].toString())
+            bandle.putString("win",result[2].toString())
             intent.putExtra("bundle",bandle)
             startActivity(intent)
 
