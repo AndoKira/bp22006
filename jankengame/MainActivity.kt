@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     val te= arrayOf("✊","✌","✋")
     private var comp:Int = 0
     private var result= arrayOf(0,0,0)
-    private var time=result.sum()+1
+    private var time=1
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         btnstart.setOnClickListener {
         tvjan.text="第"+time+"回戦"
-            tvte.text="じゃんけん・・ポン"
+            tvte.text="ポン!!"
             comp= Random().nextInt(3)
 
             btngu.isEnabled=true
