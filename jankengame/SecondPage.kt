@@ -22,9 +22,8 @@ class SecondPage : AppCompatActivity() {
         val bundle=intent.getBundleExtra("bundle")
         val win= bundle?.getString("win")
         val lose= bundle?.getString("lose")
-        val draw= bundle?.getString("draw")
 
-        Res.text=win+"勝"+lose+"敗"+draw+"分け"
+        Res.text=win+"勝"+lose+"敗"
 
         btnback.setOnClickListener {
             val intent=Intent(this,MainActivity::class.java)
